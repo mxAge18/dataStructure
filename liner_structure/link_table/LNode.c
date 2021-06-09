@@ -4,7 +4,9 @@
 // List Ptrl;
 
 List MakeEmpty() {
-    List Ptrl;
+    List Ptrl = (List)malloc(sizeof(struct _liner_table_node));
+    Ptrl->Data = -100;
+    Ptrl->Next = NULL;
     return Ptrl;
 }
 // 长度
@@ -56,18 +58,18 @@ List Insert(int i,ElementType X, List Ptrl)
 {
     List p,s;
     if (i == 1) {
-        s = (List)malloc(sizeof(struct LNode));
+        s = (List)malloc(sizeof(struct _liner_table_node));
         s->Next = Ptrl;
         s->Data = X;
         return s;
     }
 
-    p = findKth(i-1, Ptrl);
+    p = FindKth(i-1, Ptrl);
     if (p == NULL) {
         printf("参数i错误");
         return NULL;
     } else {
-        s = (List)malloc(sizeof(struct LNode));
+        s = (List)malloc(sizeof(struct _liner_table_node));
         s->Next = p->Next;
         s->Data = X;
         p->Next = s;
@@ -96,7 +98,7 @@ List Delete(int i, List Ptrl)
         free(s);
         return Ptrl;
     } else {
-        p = findKth(i - 1, Ptrl);
+        p = FindKth(i - 1, Ptrl);
         if (p == NULL) {
             printf("第%d个节点不存在", i - 1);
             return NULL;

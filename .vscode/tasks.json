@@ -8,6 +8,7 @@
             "args": [
                 "-g",
                 "${workspaceFolder}/main.c",
+                "${workspaceFolder}/liner_structure/link_table/LNode.c",
                 "-o",
                 "${workspaceFolder}/main.o"
             ],
@@ -26,7 +27,8 @@
             "command": "/usr/bin/clang",
             "args": [
                 "-g",
-                "${file}",
+                "${workspaceFolder}/main.c",
+                "${workspaceFolder}/liner_structure/link_table/LNode.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

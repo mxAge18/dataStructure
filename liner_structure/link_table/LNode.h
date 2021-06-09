@@ -3,11 +3,12 @@
 #include "../common/linerLib.h"
 
 // 1 定义单链表结构体 List为 LNode的指针
-typedef struct LNode {
+typedef struct _liner_table_node *List;
+struct _liner_table_node {
     /* data */
     ElementType Data;
-    struct LNode *Next;
-}*List;
+    struct _liner_table_node *Next;
+};
 
 // 2 声明初始化一个空链表的函数
 List MakeEmpty();
