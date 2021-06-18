@@ -27,3 +27,11 @@ List Insert(int i,ElementType X, List Ptrl);
 
 // 7 声明删除链表第i个结构的函数
 List Delete(int i, List Ptrl);
+
+// 8 声明一个按链表顺序打印的函数
+void PrintData(List Ptrl);
+
+// 8 声明一个按链表顺序打印的函数
+List InitLinerTable();
+
+List SortLinerTabel(List Ptrl);

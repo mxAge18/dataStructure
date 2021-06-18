@@ -8,7 +8,9 @@
 		"files.associations": {
 			"stdio.h": "c",
 			"lnode.h": "c",
-			"linerlib.h": "c"
+			"linerlib.h": "c",
+			"aqueue.h": "c",
+			"lqueue.h": "c"
 		}
 	},
 	"launch": {

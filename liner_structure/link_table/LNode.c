@@ -17,7 +17,7 @@ int Length(List Ptrl) {
         p = p->Next;
         j++;
     }
-    return j;
+    return j - 1;
 }
 
 //查找第K个元素
@@ -112,4 +112,34 @@ List Delete(int i, List Ptrl)
             return Ptrl;
         }
     }
+}
+
+void PrintData(List Ptrl) {
+    printf("链表所存取的数据:\n");
+    while (Ptrl->Next != NULL) {
+        printf("->%d\n", Ptrl->Data);
+        Ptrl = Ptrl->Next;
+    }
+    free(Ptrl);
+}
+
+List InitLinerTable(List Ptrl) {
+    int v;
+    char c;
+    printf("初始化链表，请以空格输入多个数字，存入链表中!\n");
+    do {
+        scanf("%d", &v);
+        // fflush(stdin);
+        c = getchar();
+        Ptrl = Insert(1,v,Ptrl);
+        if (c == '\n') {
+            break;
+        }
+    } while (1);
+    return Ptrl;
+
+}
+
+List SortLinerTabel(List Ptrl) {
+    return Ptrl;
 }

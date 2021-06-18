@@ -29,6 +29,7 @@
                 "-g",
                 "${workspaceFolder}/main.c",
                 "${workspaceFolder}/liner_structure/link_table/LNode.c",
+                "${workspaceFolder}/liner_structure/stack/array_stack/AStack.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
