@@ -10,7 +10,9 @@
 			"lnode.h": "c",
 			"linerlib.h": "c",
 			"aqueue.h": "c",
-			"lqueue.h": "c"
+			"lqueue.h": "c",
+			"astack.h": "c",
+			"stdlib.h": "c"
 		}
 	},
 	"launch": {
