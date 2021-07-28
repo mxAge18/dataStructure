@@ -12,7 +12,17 @@
 			"aqueue.h": "c",
 			"lqueue.h": "c",
 			"astack.h": "c",
-			"stdlib.h": "c"
+			"stdlib.h": "c",
+			"binary_tree.h": "c",
+			"huffman_tree.h": "c",
+			"min_heap.h": "c",
+			"cstdlib": "c",
+			"locale": "c",
+			"ostream": "c",
+			"new": "c",
+			"*.tcc": "c",
+			"memory": "c",
+			"__hash_table": "c"
 		}
 	},
 	"launch": {

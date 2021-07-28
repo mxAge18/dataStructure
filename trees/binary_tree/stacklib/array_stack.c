@@ -1,4 +1,4 @@
-#include "astack.h"
+#include "array_stack.h"
 AStack MakeEmptyArrayStack(){
     AStack Ptrl;
     Ptrl = (AStack)malloc(sizeof(struct _array_stack_node));

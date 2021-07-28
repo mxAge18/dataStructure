@@ -2,6 +2,14 @@
 #include "./stacklib/array_stack.h"
 #include "./queuelib/liner_queue.h"
 
+
+BinTree createBinTreeNode(ElementType x) {
+    BinTree ptr;
+    ptr = (BinTree)malloc(sizeof(struct _tree_node));
+    ptr->Left = ptr->Right = NULL;
+    ptr->Data = x;
+    return ptr;
+}
 // 先序遍历 先访问根节点 然后访问左子树 然后访问右子树
 void PreOrderTransferRecursive(BinTree ptr) {
     if (ptr) {

@@ -31,7 +31,16 @@ List Delete(int i, List Ptrl);
 // 8 声明一个按链表顺序打印的函数
 void PrintData(List Ptrl);
 
-// 8 声明一个按链表顺序打印的函数
+// 9 声明一个初始化链表的函数
 List InitLinerTable();
 
 List SortLinerTabel(List Ptrl);
+
+// 翻转一个链表
+List Reverse(List head);
+
+// 对链表前N个节点进行翻转
+List ReverseN(List head, int i);
+
+// 对链表的第m 到 n进行翻转
+List ReverseBetween(List head, int m, int n);

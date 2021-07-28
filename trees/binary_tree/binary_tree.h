@@ -1,4 +1,3 @@
-
 #include "../../common/commonLib.h"
 typedef struct _tree_node *BinTree;
 struct _tree_node {
@@ -8,13 +7,7 @@ struct _tree_node {
 };
 typedef BinTree Position;
 
-BinTree createBinTree();
-
-int InsertElementToBinTree(BinTree ptr);
-
-int DeleteElementFromBinTree(BinTree ptr);
-
-void isEmpty(BinTree ptr);
+BinTree createBinTreeNode(ElementType x);
 
 /**四种遍历方法
 */

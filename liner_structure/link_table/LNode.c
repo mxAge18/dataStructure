@@ -143,3 +143,60 @@ List InitLinerTable(List Ptrl) {
 List SortLinerTabel(List Ptrl) {
     return Ptrl;
 }
+
+
+// 链表中m 到 n的元素进行翻转
+// 1<=m<=n<=len(ptrl)
+/*
+    1 输入链表的头指针，
+    2 以头指针为起点进行翻转
+    3 返回翻转后的头结点
+*/
+//   1 -> 2 -> 3 -> 4 -> 5 -> NULL
+// head
+
+//   1 -> reverse(2 -> 3 -> 4 -> 5 -> NULL)
+// head
+
+
+// 对链表所有元素进行翻转
+List Reverse(List head) {
+    // 头节点->next如果不空，递归调用函数翻转
+    // 头节点->next变为null，翻转后的尾节点指向头结点
+    if (head->Next == NULL) return head;
+    List last = Reverse(head->Next);
+    head->Next->Next = head; // 变换后的尾巴节点指向head
+    head->Next = NULL;       // head->next变为null, 成为新的尾节点
+    return last;
+}
+
+// 对链表前N个节点进行翻转
+List successor = NULL; //后驱节点
+List ReverseN(List head, int i) {
+    // 翻转以head为开头的n个节点，返回新的头结点
+    // 前N个节点翻转，原来的头节点变成前N个节点的尾节点，
+    // 原来的头节点指向未翻转的节点第一个节点
+    // 1 -> 2 -> 3 -> 4 -> 5 -> 6 i = 3;
+    // 3 -> 2 -> 1 -> 4 -> 5 -> 6
+    if (i == 1) {
+        successor = head->Next;
+        return head;
+    }
+    // 以head->next为起点，反转前n-1个节点
+    List last = ReverseN(head->Next, i - 1);
+
+    head->Next->Next = head;
+    // 翻转后的head节点与后面的节点连接起来。
+    head->Next = successor; 
+    return last;
+}
+
+List ReverseBetween(List head, int m, int n) {
+    if (m == 1) {
+        return ReverseN(head, n);
+    }
+    // m ！= 1 ,把链表的起点跳过，从head->next找需要翻转的元素，
+    // 向前挪动一位，要翻转的位置就都 - 1
+    head->Next = ReverseBetween(head->Next, m - 1, n - 1);
+    return head;
+}
