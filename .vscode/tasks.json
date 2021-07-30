@@ -7,8 +7,10 @@
             "command": "/usr/bin/gcc",
             "args": [
                 "-g",
-                "${workspaceFolder}/main.c",
-                "${workspaceFolder}/liner_structure/link_table/LNode.c",
+                "${workspaceFolder}/algorithm/main.c",
+                "${workspaceFolder}/algorithm/enumeration/enumeration.c",
+                // "${workspaceFolder}/main.c",
+                // "${workspaceFolder}/liner_structure/link_table/LNode.c",
                 "-o",
                 "${workspaceFolder}/main.o"
             ],
@@ -27,9 +29,11 @@
             "command": "/usr/bin/clang",
             "args": [
                 "-g",
-                "${workspaceFolder}/main.c",
-                "${workspaceFolder}/liner_structure/link_table/LNode.c",
-                "${workspaceFolder}/liner_structure/stack/array_stack/AStack.c",
+                "${workspaceFolder}/algorithm/main.c",
+                "${workspaceFolder}/algorithm/enumeration/enumeration.c",
+                // "${workspaceFolder}/main.c",
+                // "${workspaceFolder}/liner_structure/link_table/LNode.c",
+                // "${workspaceFolder}/liner_structure/stack/array_stack/AStack.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

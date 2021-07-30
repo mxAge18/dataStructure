@@ -13,7 +13,8 @@
 			"lqueue.h": "c",
 			"astack.h": "c",
 			"stdlib.h": "c",
-			"binary_tree.h": "c"
+			"binary_tree.h": "c",
+			"enumeration.h": "c"
 		}
 	},
 	"launch": {
