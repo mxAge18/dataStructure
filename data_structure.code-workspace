@@ -14,7 +14,12 @@
 			"astack.h": "c",
 			"stdlib.h": "c",
 			"binary_tree.h": "c",
-			"enumeration.h": "c"
+			"enumeration.h": "c",
+			"random": "c",
+			"iostream": "c",
+			"recursive.h": "c",
+			"complex": "c",
+			"cmath": "c"
 		}
 	},
 	"launch": {

@@ -8,7 +8,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/main",
+            "program": "${workspaceFolder}/algorithm/recursive/recursive",
             "args": [],
             "cwd": "${workspaceFolder}"
         }
