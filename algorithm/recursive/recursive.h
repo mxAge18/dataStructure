@@ -62,3 +62,9 @@ void Stairs();
  * m个苹果放n个盘子里
 */
 void SetApple();
+
+/**
+ * 计算24
+*/
+
+void Caculate24();

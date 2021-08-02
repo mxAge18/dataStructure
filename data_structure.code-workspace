@@ -19,7 +19,8 @@
 			"iostream": "c",
 			"recursive.h": "c",
 			"complex": "c",
-			"cmath": "c"
+			"cmath": "c",
+			"cstdio": "c"
 		}
 	},
 	"launch": {

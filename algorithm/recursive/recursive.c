@@ -1,5 +1,5 @@
 #include "recursive.h"
-
+#include <math.h>
 void hanoiRecursive(int n, char src, char mid, char dest) {
    if (n == 1) {
        // 只有一个盘子，直接将盘子从src 到 dest
@@ -192,6 +192,79 @@ void SetApple() {
         printf("请输入盘子数量：");
         scanf("%d", &n);
         printf("%d", get_apple_options(m, n));
+    }
+}
+
+int is_zero(double x) {
+    if (fabs(x) <= 1e-6) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+int count24(double a[], int n) {
+    // 边界条件：
+    if (n == 1) {
+        if (is_zero(a[9] - 24)) {
+            return 1;
+        }
+        return 0;
+    }
+    double b[5];
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i; j < n; j++) {
+            // 枚举，先计算两个数。结果和剩下的n-2个数进行计算，将问题转换为n-1个数的计算。
+            int m;
+            for (int k; k < n; k++) {
+                if (k != i && k != j) {
+                    b[m++] = a[k];
+                }
+            } 
+
+            b[m] = a[i] + a[j];
+            if (count24(b, m+1)) {
+                return 1;
+            }
+            b[m] = a[i] - a[j];
+            if (count24(b, m+1)) {
+                return 1;
+            }
+            b[m] = a[j] - a[i];
+            if (count24(b, m+1)) {
+                return 1;
+            }
+            b[m] = a[j] * a[i];
+            if (count24(b, m+1)) {
+                return 1;
+            }
+
+            if (is_zero(a[i])) {
+                b[m] = a[i] / a[j];
+                if (count24(b, m+1)) {
+                    return 1;
+                }
+            }
+            if (is_zero(a[j])) {
+                b[m] = a[j] / a[i];
+                if (count24(b, m+1)) {
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
+
+}
+void Caculate24() {
+    double a[5];
+    for (int i = 0; i < 4; i++) {
+        scanf("%lf", &a[i]);
+    }
+    int res = count24(a, 4);
+    if (res == 1) {
+        printf("yes");
+    } else {
+         printf("no");
     }
 }
 int main() {
